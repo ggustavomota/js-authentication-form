@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Form</title>
 </head>
 <body>
     <div id="principaldiv">
@@ -19,9 +19,14 @@
         <input type="email" placeholder="E-mail" id="input3"><br>
         <input type="password" placeholder="Password" id="input4"><br>
         <button type="button" id="button1" onclick="Go()">Next</button>
-        <p>You need help ?</p>
+        <p onclick="Help()">You need help ?</p>
     </form>
     </div>
+    <div id="helpd"><h1>How to complete the form:</h1>
+        <p class="psbox">- Don't leave any blank space</p>
+        <p class="psbox">- Don't put invalid characters in input</p>
+        <p class="psbox">- If any information were wrong, you can't progress</p>
+        <button id="close" onclick="Close()">X</button></div>
 <script src="scripts.js"></script>    
 </body>
 </html>

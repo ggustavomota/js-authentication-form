@@ -28,12 +28,18 @@ if(input1convert == ''){
 else if(input2convert == ''){
     createp(create, div1, catchinput2)
 }
-else if(input3convert == ''){
+else if(input3convert == '' || input3convert.includes('@') == false || input3convert.includes('.com') == false){
     createp(create, div1, catchinput3)
 }
 else if(input4convert == ''){
     createp(create, div1, catchinput4)
+}else{
+    div1.style.visibility = 'hidden'
 }
+
+setTimeout(() =>{
+    div1.removeChild(create)
+}, 4000)
 
 if(input1convert != ''){
     catchinput1.style.border = 'none'
@@ -45,7 +51,7 @@ if(input2convert != ''){
     div1.removeChild(create)
 }
 
-if(input3convert != ''){
+if(input3convert != '' && input3convert.includes('@') == true){
     catchinput3.style.border = 'none'
     div1.removeChild(create)
 }
@@ -55,4 +61,12 @@ if(input4convert != ''){
     div1.removeChild(create)
 }
     }
+
+function Help(){
+    document.querySelector('#helpd').style.marginLeft = '0px'
+}
+
+function Close(){
+    document.querySelector('#helpd').style.marginLeft = '-300px'
+}
 
